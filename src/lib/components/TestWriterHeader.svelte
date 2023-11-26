@@ -19,13 +19,9 @@
 	const addTag = () => {
 		console.log('Added tag called', tagName, selectorType, selectorValue);
 		if (!tagName || !selectorType || !selectorValue) return;
-		const falke: Tag[] = [];
-		for (let i = 1; i <= 50; i++) {
-			const tag = new Tag(tagName + i, selectorType, selectorValue);
-			falke.push(tag);
-		}
+		const tag = new Tag(tagName, selectorType, selectorValue);
 		tagStore.update((pre: Tag[]) => {
-			const newTags = [...pre, ...falke]; // Create a new array with the new tag
+			const newTags = [...pre, tag]; // Create a new array with the new tag
 			return newTags; // Return the new state
 		});
 		tags = tags;

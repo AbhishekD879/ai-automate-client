@@ -24,7 +24,7 @@
 	};
 </script>
 
-<div class="flex items-start justify-evenly shadow-xl">
+<div class="flex items-start justify-evenly shadow-2xl">
 	<div class="flex flex-col justify-start items-center h-full p-2">
 		<h3 class="font-semibold">Step:{step + 1}</h3>
 		<IconButton bind:disabled onclick={runTestStep}>
